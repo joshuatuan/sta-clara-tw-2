@@ -114,7 +114,7 @@ export default function TodoList({ initialTasks }: { initialTasks: Task[] }) {
             >
               <div className="flex items-center gap-4">
                 <Checkbox
-                  checked={!task.is_completed}
+                  checked={task.is_completed ?? undefined}
                   onCheckedChange={() => handleUpdateTaskState(task.id)}
                 />
                 <span
