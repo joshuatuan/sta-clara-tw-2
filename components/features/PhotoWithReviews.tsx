@@ -8,11 +8,11 @@ import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { User } from "@supabase/supabase-js";
-import { Photo, Review, ReviewType } from "@/app/types/globals";
+import { ReviewPhoto, Review, ReviewType } from "@/app/types/globals";
 
 type PhotoWithReviewsProps = {
   currentUser: User;
-  photo: Photo;
+  photo: ReviewPhoto;
   type: ReviewType;
 };
 
@@ -91,7 +91,7 @@ export default function PhotoWithReviews({
   );
 }
 
-function ReviewItem({
+export function ReviewItem({
   review,
   isCurrentUser,
 }: {

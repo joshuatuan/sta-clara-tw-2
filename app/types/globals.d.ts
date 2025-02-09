@@ -1,4 +1,19 @@
-type Photo = {
+export type Notes = {
+  content: string | null;
+  created_at: string;
+  id: string;
+  user_id: string;
+};
+
+export type Review = {
+  created_at: string;
+  id: string;
+  review_text: string;
+  user_id: string | null;
+  user_email: string;
+};
+
+export type ReviewPhoto = {
   created_at: string;
   file_name: string;
   file_url: string;
@@ -6,13 +21,6 @@ type Photo = {
   title: string;
   type: string;
   user_id: string | null;
-};
-
-export type Notes = {
-  content: string | null;
-  created_at: string;
-  id: string;
-  user_id: string;
 };
 
 export type GDrivePhoto = {
@@ -32,12 +40,11 @@ export type Task = {
   user_id: string | null;
 };
 
-type Review = {
-  created_at: string;
+// Only the necessary fields for the user, instead of the entire user object
+export type UserData = {
+  email: string | undefined;
   id: string;
-  review_text: string;
-  user_id: string | null;
-  user_email: string;
+  created_at: string;
 };
 
 export type ReviewType = "food" | "pokemon";
