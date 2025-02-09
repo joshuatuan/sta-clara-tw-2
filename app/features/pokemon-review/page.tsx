@@ -16,7 +16,7 @@ export default async function PokemonReviewPage() {
 
   return (
     <div className="max-w-7xl space-y-4">
-      <h1 className="text-2xl font-bold">Food Reviews</h1>
+      <h1 className="text-2xl font-bold">Pokemon Reviews</h1>
       <div className="block h-[70vh] xl:grid xl:grid-cols-[1fr_2fr] xl:gap-x-8">
         <div>
           <CreateReviewForm type={REVIEW_TYPE} />

@@ -4,11 +4,10 @@ import { fetchNotes } from "@/lib/actions/notesActions";
 export default async function NotesPage() {
   const notes = await fetchNotes();
 
-  console.log("notes: ", notes);
-
   return (
-    <div>
+    <>
+      <h1 className="mb-4 text-2xl font-bold">My Notes</h1>
       <Notes initialNotes={notes} />
-    </div>
+    </>
   );
 }

@@ -9,7 +9,7 @@ export default async function ToDoListPage() {
 
   return (
     <>
-      <h1 className="mb-4 text-2xl font-semibold">Todo List</h1>
+      <h1 className="mb-4 text-2xl font-bold">Todo List</h1>
       <TodoList initialTasks={tasks} />
     </>
   );
