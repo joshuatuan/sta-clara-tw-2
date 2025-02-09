@@ -37,13 +37,9 @@ export default function Notes({
 
   return (
     <div className="max-w-3xl space-y-4">
-      <h1 className="text-2xl font-bold">My Notes</h1>
       <div className="space-y-4">
         {isEditing ? (
           <form className="space-y-2" onSubmit={handleSave}>
-            <p className="text-sm italic text-muted-foreground">
-              Editing in markdown mode
-            </p>
             <Textarea
               value={tempNotes}
               onChange={(e) => setTempNotes(e.target.value)}
@@ -52,11 +48,16 @@ export default function Notes({
               placeholder="Enter notes"
               className="mb-6"
             />
-            <div className="flex justify-end space-x-2">
-              <Button>Save</Button>
-              <Button variant="outline" onClick={handleCancel}>
-                Cancel
-              </Button>
+            <div className="ml-2 flex justify-between">
+              <p className="text-xs font-medium italic text-muted-foreground">
+                Editing in markdown mode
+              </p>
+              <div className="flex justify-end space-x-2">
+                <Button>Save</Button>
+                <Button variant="outline" onClick={handleCancel}>
+                  Cancel
+                </Button>
+              </div>
             </div>
           </form>
         ) : (
