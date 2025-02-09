@@ -128,8 +128,11 @@ export default function TodoList({ initialTasks }: { initialTasks: Task[] }) {
                 size="sm"
                 className="hover:shadow-sm"
                 onClick={() => handleDeleteTask(task.id)}
+                aria-label="Delete task"
+                title="Delete task"
               >
                 <Trash />
+                <span className="sr-only">Delete Task</span>
               </Button>
             </li>
           ))}
