@@ -2,19 +2,13 @@ import { deleteAccountAction, signOutAction } from "@/lib/actions/auth";
 import AlertButton from "../alertButton";
 import { Button } from "../ui/button";
 import { type UserData } from "@/app/types/globals";
-
-const getGreeting = () => {
-  const hour = new Date().getHours();
-  if (hour < 12) return "Good morning";
-  if (hour < 18) return "Good afternoon";
-  return "Good evening";
-};
+import DashboardGreeting from "./DashboardGreeting";
 
 export default function Dashboard({ user }: { user: UserData }) {
   return (
     <div className="mx-auto flex flex-col gap-10">
       <div className="space-y-1">
-        <h1 className="mb-8 text-3xl font-bold">{getGreeting()} 👋</h1>
+        <DashboardGreeting />
         <h1 className="mb-6 text-lg">
           Logged in as <span className="font-medium">{user.email}</span>
         </h1>
